@@ -1,1 +1,1 @@
-# scp-wiki-visualization
+# scp-visualization
