@@ -1,3 +1,4 @@
+using SCPVisualization.ScreensManagement;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -8,10 +9,14 @@ namespace VisualizationManagement
 {
 	public class VisualizationManager : MonoBehaviour
 	{
+		[field: SerializeField]
+		private ScreenManager ScreenManager { get; set; }
+		
 		private AsyncOperationHandle<SceneInstance> ActiveScene { get; set; }
 		
 		public void LoadVisualization (AssetReference visualizationScene)
 		{
+			ScreenManager.CloseAllScreens();
 			AsyncOperationHandle<SceneInstance> sceneLoadingProcess = visualizationScene.LoadSceneAsync(LoadSceneMode.Additive);
 			
 			sceneLoadingProcess.Completed += sceneHandle =>
@@ -23,7 +28,6 @@ namespace VisualizationManagement
 					
 					Visualization visualizationObject = FindObjectOfType<Visualization>();
 					visualizationObject.OnVisualizationEnd += EndVisualization;
-					visualizationObject.StartVisualization();
 				}
 			};
 		}
