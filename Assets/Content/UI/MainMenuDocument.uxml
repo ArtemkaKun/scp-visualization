@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="align-items: center; justify-content: center; height: 100%; width: auto; background-color: rgba(236, 236, 236, 255);">
-        <ui:Button text="SCPLibrary" display-tooltip-when-elided="true" name="SCPLibrary" style="align-items: center; justify-content: center; width: 500px; height: 100px; left: auto; -unity-font: url(&apos;project://database/Assets/External/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&apos;); font-size: 42px;" />
-        <ui:Button text="Exit" display-tooltip-when-elided="true" name="Exit" style="align-items: center; justify-content: center; width: 500px; height: 100px; left: auto; -unity-font: url(&apos;project://database/Assets/External/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&apos;); font-size: 42px;" />
+    <Style src="project://database/Assets/Content/UI/DefaultStyle.uss?fileID=7433441132597879392&amp;guid=449d0bb0e4c568983b4d58ccb4024e65&amp;type=3#DefaultStyle" />
+    <ui:VisualElement style="align-items: center; justify-content: center; height: 100%; width: auto; background-color: rgb(236, 236, 236);">
+        <ui:Button text="SCP Library" display-tooltip-when-elided="true" name="SCPLibrary" class="button" />
+        <ui:Button text="Exit" display-tooltip-when-elided="true" name="Exit" class="button" style="align-items: center; justify-content: center; width: auto; height: auto; left: auto;" />
     </ui:VisualElement>
 </ui:UXML>

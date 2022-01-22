@@ -1,8 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Content/UI/DefaultStyle.uss?fileID=7433441132597879392&amp;guid=449d0bb0e4c568983b4d58ccb4024e65&amp;type=3#DefaultStyle" />
     <ui:VisualElement style="height: 100%; align-items: center; justify-content: center; background-color: rgba(236, 236, 236, 255);">
         <ui:VisualElement>
             <ui:ListView focusable="true" name="SCPList" />
         </ui:VisualElement>
-        <ui:Button text="Return to Menu" display-tooltip-when-elided="true" name="ReturnToMenu" style="font-size: 40px; width: 500px; height: 100px; align-items: center; justify-content: center;" />
+        <ui:Button text="Return to Menu" display-tooltip-when-elided="true" name="ReturnToMenu" class="button" />
     </ui:VisualElement>
 </ui:UXML>

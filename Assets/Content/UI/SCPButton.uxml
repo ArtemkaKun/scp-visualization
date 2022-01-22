@@ -1,3 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Button text="Button" display-tooltip-when-elided="true" name="SCPButton" style="height: 100px; font-size: 36px; align-items: center; justify-content: center;" />
+    <Style src="project://database/Assets/Content/UI/DefaultStyle.uss?fileID=7433441132597879392&amp;guid=449d0bb0e4c568983b4d58ccb4024e65&amp;type=3#DefaultStyle" />
+    <ui:Button text="Button" display-tooltip-when-elided="true" name="SCPButton" class="button" />
 </ui:UXML>
