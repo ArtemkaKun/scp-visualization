@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="align-items: center; justify-content: center; height: 100%; width: auto;">
+    <ui:VisualElement style="align-items: center; justify-content: center; height: 100%; width: auto; background-color: rgba(236, 236, 236, 255);">
         <ui:Button text="SCPLibrary" display-tooltip-when-elided="true" name="SCPLibrary" style="align-items: center; justify-content: center; width: 500px; height: 100px; left: auto; -unity-font: url(&apos;project://database/Assets/External/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&apos;); font-size: 42px;" />
         <ui:Button text="Exit" display-tooltip-when-elided="true" name="Exit" style="align-items: center; justify-content: center; width: 500px; height: 100px; left: auto; -unity-font: url(&apos;project://database/Assets/External/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&apos;); font-size: 42px;" />
     </ui:VisualElement>
