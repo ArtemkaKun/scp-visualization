@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3d37f404fd467da5a4112d12a67547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ScreenManager>k__BackingField: {fileID: 1219521459}
 --- !u!4 &751116800
 Transform:
   m_ObjectHideFlags: 0
