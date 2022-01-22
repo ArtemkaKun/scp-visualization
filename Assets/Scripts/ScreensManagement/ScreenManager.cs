@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace SCPVisualization.ScreensManagement
 {
 	public class ScreenManager : SerializedMonoBehaviour
 	{
 		[field: NonSerialized, OdinSerialize, OnValueChanged(nameof(SetNamesToAsset), true)]
-		private Dictionary<string, GameObject> NameScreenObjectMap { get; set; } = new();
+		private Dictionary<string, UIDocument> NameScreenObjectMap { get; set; } = new();
 		[field: SerializeField]
 		private ScreenNames Names { get; set; }
 		[field: SerializeField, ValueDropdown(nameof(GetScreenNames))]
@@ -19,9 +20,9 @@ namespace SCPVisualization.ScreensManagement
 		{
 			if (NameScreenObjectMap.ContainsKey(screenName) == true)
 			{
-				foreach ((string cachedName, GameObject cachedScreenObject) in NameScreenObjectMap)
+				foreach ((string cachedName, UIDocument cachedScreenObject) in NameScreenObjectMap)
 				{
-					cachedScreenObject.SetActive(cachedName == screenName);
+					cachedScreenObject.rootVisualElement.style.display = cachedName == screenName ? DisplayStyle.Flex : DisplayStyle.None;
 				}
 			}
 		}
@@ -35,7 +36,7 @@ namespace SCPVisualization.ScreensManagement
 		{
 			List<string> newNames = new(NameScreenObjectMap.Count);
 
-			foreach (KeyValuePair<string, GameObject> nameObjectPair in NameScreenObjectMap)
+			foreach (KeyValuePair<string, UIDocument> nameObjectPair in NameScreenObjectMap)
 			{
 				newNames.Add(nameObjectPair.Key);
 			}
