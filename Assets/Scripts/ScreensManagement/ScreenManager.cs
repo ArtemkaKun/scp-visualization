@@ -20,10 +20,16 @@ namespace SCPVisualization.ScreensManagement
 		{
 			if (NameScreenObjectMap.ContainsKey(screenName) == true)
 			{
-				foreach ((string cachedName, UIDocument cachedScreenObject) in NameScreenObjectMap)
-				{
-					cachedScreenObject.rootVisualElement.style.display = cachedName == screenName ? DisplayStyle.Flex : DisplayStyle.None;
-				}
+				CloseAllScreens();
+				NameScreenObjectMap[screenName].rootVisualElement.style.display =  DisplayStyle.Flex;
+			}
+		}
+		
+		public void CloseAllScreens ()
+		{
+			foreach ((string _, UIDocument cachedScreenObject) in NameScreenObjectMap)
+			{
+				cachedScreenObject.rootVisualElement.style.display = DisplayStyle.None;
 			}
 		}
 
