@@ -9,6 +9,7 @@ namespace SCPVisualization.UI.Screens
 		
 		private void Awake ()
 		{
+			Model.OnGetRootVisualElement += () => View.rootVisualElement;
 			ReturnToMenuButton = View.rootVisualElement.Q<Button>("ReturnToMenu");
 		}
 		
