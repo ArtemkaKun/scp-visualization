@@ -11,6 +11,8 @@ namespace VisualizationManagement
 	{
 		[field: SerializeField]
 		private ScreenManager ScreenManager { get; set; }
+		[field: SerializeField]
+		private ScreenNamePicker SCPLibraryScreenPicker { get; set; }
 		
 		private AsyncOperationHandle<SceneInstance> ActiveScene { get; set; }
 		
@@ -35,6 +37,7 @@ namespace VisualizationManagement
 		private void EndVisualization ()
 		{
 			Addressables.UnloadSceneAsync(ActiveScene);
+			ScreenManager.ShowScreen(SCPLibraryScreenPicker.ScreenName);
 		}
 	}
 }
