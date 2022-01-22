@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace SCPVisualization.MVVM
 {
@@ -6,5 +7,7 @@ namespace SCPVisualization.MVVM
 	{
 		[field: SerializeField]
 		protected TModel Model { get; private set; }
+		[field: SerializeField]
+		protected UIDocument View { get; private set; }
 	}
 }
