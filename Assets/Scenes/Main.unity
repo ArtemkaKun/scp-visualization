@@ -271,6 +271,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ScreenManager>k__BackingField: {fileID: 1219521459}
+  <SCPLibraryScreenPicker>k__BackingField:
+    <ScreenName>k__BackingField: SCPLibrary
+    <NamesAsset>k__BackingField: {fileID: 11400000, guid: 5a3597b0d3fc5ee1097e647ca6684eaa,
+      type: 2}
 --- !u!4 &751116800
 Transform:
   m_ObjectHideFlags: 0
