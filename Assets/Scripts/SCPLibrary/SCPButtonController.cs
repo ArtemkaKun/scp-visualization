@@ -14,11 +14,13 @@ namespace SCPLibrary
 		public void SetCharacterData(uint ID, SCPLibraryManager libraryManager)
 		{
 			SCPButton.text = $"SCP-{ID:D3}";
+			SCPButton.clicked += OnSCPButtonOnclicked;
 
-			SCPButton.clicked += () =>
+			void OnSCPButtonOnclicked ()
 			{
+				SCPButton.clicked -= OnSCPButtonOnclicked;
 				libraryManager.StartVisualization(ID);
-			};
+			}
 		}
 	}
 }
