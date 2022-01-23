@@ -5,7 +5,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
-namespace VisualizationManagement
+namespace SCPVisualization.VisualizationManagement
 {
 	public class VisualizationManager : MonoBehaviour
 	{

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-namespace SCPLibrary
+namespace SCPVisualization.SCPLibrary
 {
 	[CreateAssetMenu(fileName = ASSET_NAME, menuName = "SCPLibrary/" + ASSET_NAME, order = 0)]
 	public class SCPMetadata : ScriptableObject

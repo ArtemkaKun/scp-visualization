@@ -1,6 +1,6 @@
 using UnityEngine.UIElements;
 
-namespace SCPLibrary
+namespace SCPVisualization.SCPLibrary
 {
 	public class SCPButtonController
 	{

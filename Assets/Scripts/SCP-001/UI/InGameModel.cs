@@ -1,8 +1,8 @@
 using SCPVisualization.MVVM;
+using SCPVisualization.VisualizationManagement;
 using UnityEngine;
-using VisualizationManagement;
 
-namespace SCP_001.UI
+namespace SCPVisualization.SCP_001
 {
 	public class InGameModel : Model
 	{

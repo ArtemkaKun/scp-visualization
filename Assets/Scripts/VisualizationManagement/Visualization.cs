@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace VisualizationManagement
+namespace SCPVisualization.VisualizationManagement
 {
 	public class Visualization : MonoBehaviour
 	{

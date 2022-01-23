@@ -2,7 +2,7 @@ using SCPVisualization.MVVM;
 using SCPVisualization.ScreensManagement;
 using UnityEngine;
 
-namespace SCPVisualization.UI.Screens
+namespace SCPVisualization.Screens
 {
 	public class MainMenuModel : Model
 	{

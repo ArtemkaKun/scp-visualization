@@ -1,11 +1,11 @@
 using System;
-using SCPLibrary;
 using SCPVisualization.MVVM;
+using SCPVisualization.SCPLibrary;
 using SCPVisualization.ScreensManagement;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace SCPVisualization.UI.Screens
+namespace SCPVisualization.Screens
 {
 	public class SCPLibraryModel : Model
 	{

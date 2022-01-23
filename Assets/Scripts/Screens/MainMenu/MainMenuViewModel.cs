@@ -1,7 +1,7 @@
 using SCPVisualization.MVVM;
 using UnityEngine.UIElements;
 
-namespace SCPVisualization.UI.Screens
+namespace SCPVisualization.Screens
 {
 	public class MainMenuViewModel : ViewModel<MainMenuModel>
 	{

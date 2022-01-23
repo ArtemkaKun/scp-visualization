@@ -1,7 +1,7 @@
+using SCPVisualization.VisualizationManagement;
 using UnityEngine;
-using VisualizationManagement;
 
-namespace SCPLibrary
+namespace SCPVisualization.SCPLibrary
 {
 	public class SCPLibraryManager : MonoBehaviour
 	{

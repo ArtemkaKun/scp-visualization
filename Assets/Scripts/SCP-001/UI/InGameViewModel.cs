@@ -1,7 +1,7 @@
 using SCPVisualization.MVVM;
 using UnityEngine.UIElements;
 
-namespace SCP_001.UI
+namespace SCPVisualization.SCP_001
 {
 	public class InGameViewModel : ViewModel<InGameModel>
 	{
