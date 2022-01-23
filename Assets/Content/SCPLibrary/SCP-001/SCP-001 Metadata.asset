@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8ee4462d8c84cf39e5004591f43fef4, type: 3}
-  m_Name: SCP001Metadata
+  m_Name: SCP-001 Metadata
   m_EditorClassIdentifier: 
   <ID>k__BackingField: 1
   <SceneReference>k__BackingField:
