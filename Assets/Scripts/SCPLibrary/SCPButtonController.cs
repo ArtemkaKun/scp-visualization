@@ -11,14 +11,14 @@ namespace SCPVisualization.SCPLibrary
 			SCPButton = rootElement.Q<Button>("SCPButton");
 		}
 
-		public void SetCharacterData(uint ID, SCPLibraryManager libraryManager)
+		public void SetSCPData(uint ID, SCPLibraryManager libraryManager)
 		{
 			SCPButton.text = $"SCP-{ID:D3}";
-			SCPButton.clicked += OnSCPButtonOnclicked;
+			SCPButton.clicked += ReactOnSCPButtonClicked;
 
-			void OnSCPButtonOnclicked ()
+			void ReactOnSCPButtonClicked ()
 			{
-				SCPButton.clicked -= OnSCPButtonOnclicked;
+				SCPButton.clicked -= ReactOnSCPButtonClicked;
 				libraryManager.StartVisualization(ID);
 			}
 		}

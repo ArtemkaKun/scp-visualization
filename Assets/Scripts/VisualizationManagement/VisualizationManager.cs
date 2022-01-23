@@ -13,25 +13,30 @@ namespace SCPVisualization.VisualizationManagement
 		private ScreenManager ScreenManager { get; set; }
 		[field: SerializeField]
 		private ScreenNamePicker SCPLibraryScreenPicker { get; set; }
-		
+
 		private AsyncOperationHandle<SceneInstance> ActiveScene { get; set; }
-		
+
 		public void LoadVisualization (AssetReference visualizationScene)
 		{
 			ScreenManager.CloseAllScreens();
 			AsyncOperationHandle<SceneInstance> sceneLoadingProcess = visualizationScene.LoadSceneAsync(LoadSceneMode.Additive);
-			
-			sceneLoadingProcess.Completed += sceneHandle =>
+			sceneLoadingProcess.Completed += ReachOnSceneWasLoaded;
+		}
+
+		private void ReachOnSceneWasLoaded (AsyncOperationHandle<SceneInstance> sceneHandle)
+		{
+			if (sceneHandle.Status == AsyncOperationStatus.Succeeded)
 			{
-				if (sceneHandle.Status == AsyncOperationStatus.Succeeded)
-				{
-					ActiveScene = sceneHandle;
-					SceneManager.SetActiveScene(sceneHandle.Result.Scene);
-					
-					Visualization visualizationObject = FindObjectOfType<Visualization>();
-					visualizationObject.OnVisualizationEnd += EndVisualization;
-				}
-			};
+				ActiveScene = sceneHandle;
+				SceneManager.SetActiveScene(sceneHandle.Result.Scene);
+				AttachToVisualizationEndEvent();
+			}
+		}
+
+		private void AttachToVisualizationEndEvent ()
+		{
+			Visualization visualizationObject = FindObjectOfType<Visualization>();
+			visualizationObject.OnVisualizationEnd += EndVisualization;
 		}
 
 		private void EndVisualization ()

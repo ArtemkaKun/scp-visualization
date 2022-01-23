@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SCPVisualization.ScreensManagement
 {
-	[CreateAssetMenu(fileName = ASSET_NAME, menuName = "ScreensManagement/" + ASSET_NAME, order = 0)]
+	[CreateAssetMenu(fileName = ASSET_NAME, menuName = "ScreensManagement/" + ASSET_NAME)]
 	public class ScreenNames : ScriptableObject
 	{
 		[field: SerializeField, ReadOnly]

@@ -10,7 +10,7 @@ namespace SCPVisualization.Screens
 	public class SCPLibraryModel : Model
 	{
 		public event Func<VisualElement> OnGetRootVisualElement;
-		
+
 		[field: SerializeField]
 		private ScreenNamePicker MenuScreenPicker { get; set; }
 		[field: SerializeField]
@@ -27,25 +27,33 @@ namespace SCPVisualization.Screens
 
 		private void OnEnable ()
 		{
+			ListView scpButtonsList = GetSCPButtonsListView();
+			scpButtonsList.makeItem = MakeSCPButton;
+			scpButtonsList.bindItem = BindSCPButton;
+			scpButtonsList.itemsSource = LibraryManager.MetadataCollection;
+		}
+
+		private ListView GetSCPButtonsListView ()
+		{
 			VisualElement rootScreenElement = OnGetRootVisualElement?.Invoke();
 			ListView scpButtonsList = rootScreenElement.Q<ListView>("SCPList");
-			
-			scpButtonsList.makeItem = () =>
-			{
-				TemplateContainer newSCPButton = SCPButtonTemplate.Instantiate();
-				SCPButtonController newSCPButtonController = new();
-				newSCPButton.userData = newSCPButtonController;
-				newSCPButtonController.SetVisualElement(newSCPButton);
-				
-				return newSCPButton;
-			};
-			
-			scpButtonsList.bindItem = (item, index) =>
-			{
-				(item.userData as SCPButtonController)?.SetCharacterData(LibraryManager.MetadataCollection[index].ID, LibraryManager);
-			};
-			
-			scpButtonsList.itemsSource = LibraryManager.MetadataCollection;
+
+			return scpButtonsList;
+		}
+
+		private VisualElement MakeSCPButton ()
+		{
+			TemplateContainer newSCPButton = SCPButtonTemplate.Instantiate();
+			SCPButtonController newSCPButtonController = new();
+			newSCPButton.userData = newSCPButtonController;
+			newSCPButtonController.SetVisualElement(newSCPButton);
+
+			return newSCPButton;
+		}
+
+		private void BindSCPButton (VisualElement buttonElement, int buttonIndex)
+		{
+			(buttonElement.userData as SCPButtonController)?.SetSCPData(LibraryManager.MetadataCollection[buttonIndex].ID, LibraryManager);
 		}
 	}
 }

@@ -3,7 +3,7 @@ using UnityEngine.AddressableAssets;
 
 namespace SCPVisualization.SCPLibrary
 {
-	[CreateAssetMenu(fileName = ASSET_NAME, menuName = "SCPLibrary/" + ASSET_NAME, order = 0)]
+	[CreateAssetMenu(fileName = ASSET_NAME, menuName = "SCPLibrary/" + ASSET_NAME)]
 	public class SCPMetadata : ScriptableObject
 	{
 		[field: SerializeField]

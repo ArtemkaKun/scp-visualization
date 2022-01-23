@@ -16,24 +16,14 @@ namespace SCPVisualization.Screens
 
 		private void OnEnable ()
 		{
-			SCPLibraryButton.clicked += OpenSCPLibrary;
-			ExitButton.clicked += ExitFromApp;
+			SCPLibraryButton.clicked += Model.OpenSCPLibrary;
+			ExitButton.clicked += Model.ExitFromApp;
 		}
 		
 		private void OnDisable ()
 		{
-			SCPLibraryButton.clicked -= OpenSCPLibrary;
-			ExitButton.clicked -= ExitFromApp;
-		}
-
-		private void OpenSCPLibrary ()
-		{
-			Model.OpenSCPLibrary();
-		}
-
-		private void ExitFromApp ()
-		{
-			Model.ExitFromApp();
+			SCPLibraryButton.clicked -= Model.OpenSCPLibrary;
+			ExitButton.clicked -= Model.ExitFromApp;
 		}
 	}
 }

@@ -7,11 +7,6 @@ namespace SCPVisualization.VisualizationManagement
 	{
 		public event Action OnVisualizationEnd = delegate { };
 
-		public void StartVisualization ()
-		{
-			Debug.Log("Visualization started");
-		}
-
 		public void EndVisualization ()
 		{
 			OnVisualizationEnd.Invoke();

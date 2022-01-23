@@ -9,23 +9,31 @@ namespace SCPVisualization.Screens
 		
 		private void Awake ()
 		{
-			Model.OnGetRootVisualElement += () => View.rootVisualElement;
+			Model.OnGetRootVisualElement += GetRootVisualElement;
 			ReturnToMenuButton = View.rootVisualElement.Q<Button>("ReturnToMenu");
 		}
 		
 		private void OnEnable ()
 		{
-			ReturnToMenuButton.clicked += ReturnToMenu;
+			ReturnToMenuButton.clicked += Model.ReturnToMenu;
 		}
 		
 		private void OnDisable ()
 		{
-			ReturnToMenuButton.clicked -= ReturnToMenu;
+			ReturnToMenuButton.clicked -= Model.ReturnToMenu;
 		}
 
-		private void ReturnToMenu ()
+		private void OnDestroy ()
 		{
-			Model.ReturnToMenu();
+			if (Model != null)
+			{
+				Model.OnGetRootVisualElement -= GetRootVisualElement;
+			}
+		}
+
+		private VisualElement GetRootVisualElement ()
+		{
+			return View.rootVisualElement;
 		}
 	}
 }
