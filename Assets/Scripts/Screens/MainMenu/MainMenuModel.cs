@@ -18,7 +18,10 @@ namespace SCPVisualization.Screens
 
 		public void ExitFromApp ()
 		{
-			Debug.Log("Exit");
+			if (Application.isEditor == false)
+			{
+				Application.Quit();
+			}
 		}
 	}
 }
